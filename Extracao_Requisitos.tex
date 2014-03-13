@@ -1,0 +1,90 @@
+\documentclass[12pt,twoside,a4paper]{article}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{timbre-ic}
+\usepackage{booktabs}
+\usepackage[table]{xcolor}
+\usepackage{url}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{pifont}
+\usepackage{float}
+
+
+\begin{document}
+
+\vskip 15mm
+
+\begin{center} 
+\textbf{MO426/MO436 - Requisitos de Software e Modelos de Especificação}
+
+\textbf{Aula Prática - Levantamento de Requisitos do \textit{e-commerce}
+CompreFacil.com}
+
+\end{center}
+
+\vskip 5mm
+
+\vskip 20mm
+
+\textbf{Atividade}
+
+\begin{enumerate}
+\item \textbf{Levantamento dos requisitos do Sistema CompreFacil.com}
+
+	\begin{itemize}
+
+		\item Identificar e priorizar os usuários e os requisitos funcionais e não funcionais
+		\item Técnica: \textit{BrainStorm} 
+
+	\end{itemize}
+	
+\item \textbf{Descrição dos requisitos}
+
+	\begin{itemize}
+	
+	\item Objetivo: Descrever os requisitos priorizados, os dados manipulados e as regras de negócio identificadas.
+	\item Exemplo: 
+
+	a)Criar conta única de cliente no Portal CompreFacil.com. O Portal
+	deve prover uma funcionalidade que permita a criação de uma conta única,
+	através da qual o usuário terá acesso a todas as demais funções do sistema. Informações: e-mail, nome, cpf, nome de usuário, senha, telefone e endereço. Regras: (a) 	um e-mail deve ser enviado para o e-mail informado formalizando a criação da conta. (b) O endereço deve ser um endereço válido na lista dos correios. (c) o nome do usuário deverá ser único.
+	
+	\end{itemize}
+
+\end{enumerate}
+% resetando configs de layout
+\newpage
+\pagestyle{plain}
+\headheight 0.0cm
+\headsep 0.0cm
+\footskip 2.2cm
+
+\section{Exercício}
+\label{sec:01}
+
+\textbf{Resposta:} 
+
+\begin{table}[H]
+\label{tab:printers}
+\begin{small}
+\begin{center}
+    \begin{tabular}{ | c | c | c | c | c |}
+    \hline
+Descrição & Endereço/Prefixo &  & Descrição & Endereço/Prefixo\\ \hline
+Infraestrutura rot. & 2001:db8::/48 &  & Rede 7 (R7) & 2001:db8:3:100::/56\\\hline
+Gestão e Monit. & 2001:db8:1::/48 &  & Rede do Host1 & 2001:db8:2::/64\\\hline
+Rede 1 (R1) & 2001:db8:2::/48 &  & Rede do Host2 & 2001:db8:3::/64\\\hline
+Rede 2 (R2) & 2001:db8:3::/48 &  & Rede do Host3 & 2001:db8:3:1::/64\\\hline
+Rede 3 (R3) & 2001:db8:4::/48 &  & Host1 & 2001:0db8:0002:0000:0000:0000:0000:0001/64\\\hline
+Rede 4 (R4) & 2001:db8:2::/56 &  & Host2 & 2001:0db8:0003:0000:0000:0000:0000:0002/64\\\hline
+Rede 5 (R5) & 2001:db8:3::/56 &  & Host3 & 2001:0db8:0003:0000:0000:0000:0000:0003/64\\\hline
+Rede 6 (R6) & 2001:db8:2:100::/56 &  &  & \\
+\hline
+    \end{tabular}
+\end{center}    
+\end{small}
+\end{table}
+
+\end{document}
