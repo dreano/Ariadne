@@ -1,4 +1,4 @@
-\documentclass[12pt,twoside,a4paper]{article}
+\documentclass[12pt,a4paper]{article}
 \usepackage[brazil]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -12,8 +12,12 @@
 \usepackage{float}
 \usepackage{multirow}
 \usepackage{indentfirst}
+\usepackage{afterpage}
+
 
 \begin{document}
+
+\markright{Documento de Especificação de Requisitos}
 
 \begin{titlepage}
 \begin{center}
@@ -35,8 +39,11 @@
 %%\vskip 15mm
 
 \tableofcontents
+\afterpage{\cfoot{\thepage}}
 
 \newpage
+%\pagestyle{plain}
+%\pagenumbering{arabic}
 
 \section{Introdução}
 
@@ -155,7 +162,8 @@ Usuário do sistema \\\hline
 \end{table}
 
 \section{Bibliografia}
-
+    %\bibliographystyle{acm}
+    %\bibliography{Documento_Extracao_Requisitos}
 [1]  Rizzoni, Ariadne M. B. e Chiossi, Thelma C. dos Santos. Introdução à Engenharia de Software. Editora da Unicamp, 2001.\\
 
 [2]  Sommerville, Ian. Software Engineering. Pearson, 2010.\\
