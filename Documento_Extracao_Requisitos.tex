@@ -11,7 +11,7 @@
 \usepackage{pifont}
 \usepackage{float}
 \usepackage{multirow}
-\usepackage{colortbl}
+\usepackage{indentfirst}
 
 \begin{document}
 
@@ -24,8 +24,8 @@
 {\large MC426A/MC436A}\\[5.1cm]
 {\bf \huge Documento de Especificação de Requisitos de Software}\\[5.1cm]
 \end{center}
-{\large Alunos:}\\[0.7cm]
-{\large Professor: Ariadne Maria B. Rizzoni Carvalho}\\[4.1cm]
+{\large Alunos:\\William Henry Gates III RA123456\\ Steven Paul Jobs RA 654321}\\[0.7cm]
+{\large Professora: Ariadne Maria B. Rizzoni Carvalho}\\[3.1cm]
 \begin{center}
 {\large Campinas}\\[0.2cm]
 {\large 2014}
@@ -33,6 +33,10 @@
 \end{titlepage}
 
 %%\vskip 15mm
+
+\tableofcontents
+
+\newpage
 
 \section{Introdução}
 
@@ -74,6 +78,7 @@ Este documento apresenta a especificação de requisitos para a informatização
 \item O portal deve validar se as informações sobre local de origem, local de destino, data de partida, data da volta e número de pessoas estão preenchidos.
 \item A data de partida deve ser maior ou igual à data corrente.
 \item A data de volta deve ser maior ou igual à data de partida.
+\newpage
 \item O número de adultos ou o número de crianças deve ser maior que zero. Por padrão, o portal deve preencher o número de adultos com 1(um) .
 \item Caso o número de crianças seja maior que 0 (zero), a idade deve ser preenchida.
 \item Caso alguma das informações acima não cumpra essas regras, o portal deve informar o usuário a respeito do erro de preenchimento. 
@@ -143,6 +148,7 @@ Usuário do sistema \\\hline
 \multirow{3}{*}{\textbf{Eventos}} & Cadastrar, Alterar e Remover passeios, hotéis, guia turístico, operadoras de \\& cartão de crédito, bancos, companhias aéreas e marítimas\\ & Visualizar e alterar a situação das reservas dos usuários. \\\hline
 \multirow{3}{*}{\textbf{Serviços}} & Cadastrar, Alterar e Remover passeios\\ & Cadastrar, Alterar e Remover companhias marítimas \\& Visualizar e alterar a situação das reservas dos usuários\\\hline
 \textbf{Subpontos de vista} & Usuário do sistema\\\hline
+\textbf{Provedor} & Nenhum\\\hline
     \end{tabular}
 \end{center}    
 \end{small}
@@ -150,12 +156,13 @@ Usuário do sistema \\\hline
 
 \section{Bibliografia}
 
-[1]  Rizzoni, Ariadne M. B. e Chiossi, Thelma C. dos Santos. Introdução à Engenharia de Software. Editora da Unicamp, 2001.
+[1]  Rizzoni, Ariadne M. B. e Chiossi, Thelma C. dos Santos. Introdução à Engenharia de Software. Editora da Unicamp, 2001.\\
 
-[2]  Sommerville, Ian. Software Engineering. Pearson, 2010.
+[2]  Sommerville, Ian. Software Engineering. Pearson, 2010.\\
 
 [3]  Lobatoxxxxxxxxxxxxxxxx. Disponível em <www.xxxxxxxxxx.com/ssl.ppt>. Acesso em 01/03/2011.
 
+\newpage
 \section{Técnica de levantamento utilizada}
 
 \textit{Houve entrevistas? Exemplos de questões. Veja exemplo:}
