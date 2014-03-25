@@ -1,0 +1,170 @@
+\documentclass[12pt,twoside,a4paper]{article}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{timbre-ic}
+\usepackage{booktabs}
+\usepackage[table]{xcolor}
+\usepackage{url}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{pifont}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{colortbl}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+{\large Universidade Estadual de Campinas}\\[0.2cm]
+{\large Instituto de Computação}\\[0.2cm]
+%{\large Nome do departamento}\\[0.2cm]
+{\large Ciência da Computação/Engenharia da Computação}\\[0.2cm]
+{\large MC426A/MC436A}\\[5.1cm]
+{\bf \huge Documento de Especificação de Requisitos de Software}\\[5.1cm]
+\end{center}
+{\large Alunos:}\\[0.7cm]
+{\large Professor: Ariadne Maria B. Rizzoni Carvalho}\\[4.1cm]
+\begin{center}
+{\large Campinas}\\[0.2cm]
+{\large 2014}
+\end{center}
+\end{titlepage}
+
+%%\vskip 15mm
+
+\section{Introdução}
+
+Este documento apresenta a especificação de requisitos para a informatização do portal de xxxx.  O portal de venda xxx uuuu...
+
+\textit{Descrever o objetivo do sistema, os ganhos esperados para a empresa e para os usuários}
+
+\textit{\textbf{Importante:} elaborar diagrama mostrando o sistema e a interação com outros sistemas/Serviços. Pode ser elaborado desenhado de forma manual e “colado” no documento} 
+
+
+\section{Glossário}
+\textit{Elaborar uma lista de termos que serão utilizados no documento, definindo o significado no contexto do projeto}
+
+\textbf{Requisitos Funcionais} - Funcionalidades que se espera que o sistema disponibilize, de uma forma completa e consistente.
+
+\textbf{Requisitos Não-Funcionais} - são os requisitos relacionados ao uso da aplicação em termos de desempenho, usabilidade, confiabilidade, segurança, disponibilidade, manutenibilidade e tecnologias envolvidas.
+ 
+\textbf{Sistema} -  
+
+\textbf{SLA} - 
+ 
+\textbf{SSL} - 
+ 
+\textbf{XXXXX}
+
+\textit{Também poderia ser elaborado em forma de tabela}
+
+\section{Definição dos requisitos de usuário}
+\subsection{Requisitos Funcionais}
+
+\textbf{RF01.} O portal deve oferecer a busca de passagens aéreas.
+
+\underline{Informações:} Local de origem, local de destino, data de partida, data de volta, quantidade  de adultos, quantidade de crianças, idade das crianças.
+
+\underline{Regras:} O sistema deve permitir que o visitante ou o cliente do portal possam executar a busca fornecendo as informações obrigatórias e, caso haja resultado para a consulta, o portal deve disponibilizar as passagens aéreas com seus preços, as companhias disponíveis, escala e conexões (se houver), origem, destino e horário. Caso não haja disponibilidade, deve ser informado ao cliente que não houve resultado para a consulta. A obtenção dos dados de passagens de avião deve ser efetivada através de uma interface de integração entre o portal e as companhias aéreas.
+
+\begin{itemize}
+
+\item O portal deve validar se as informações sobre local de origem, local de destino, data de partida, data da volta e número de pessoas estão preenchidos.
+\item A data de partida deve ser maior ou igual à data corrente.
+\item A data de volta deve ser maior ou igual à data de partida.
+\item O número de adultos ou o número de crianças deve ser maior que zero. Por padrão, o portal deve preencher o número de adultos com 1(um) .
+\item Caso o número de crianças seja maior que 0 (zero), a idade deve ser preenchida.
+\item Caso alguma das informações acima não cumpra essas regras, o portal deve informar o usuário a respeito do erro de preenchimento. 
+\item Caso o valor das passagens para crianças seja diferente do valor das passagens para adultos, deve ser apresentada qual a regra utilizada, por exemplo: "Crianças acima de 6 (seis) anos devem pagar valor integral".
+
+\end{itemize}
+
+\textbf{RF02. }
+
+\textbf{RF03.} 
+
+\textbf{(Etc...)}
+
+ 
+
+
+\subsection{Requisitos Não Funcionais}
+
+\textbf{RNF01.} O sistema deverá armazenar as informações de senha e dados bancários utilizando criptografia
+
+\textbf{RNF02.} O sistema deverá ser independente de plataforma hardware e....
+
+\section{Evolução do Sistema}
+
+O sistema baseado em plataforma WEB estará preparado para integrar as seguintes funcionalidades:
+Disponibilizar acesso através de plataforma móvel (smartphone);
+XXX
+
+
+
+\section{Diagrama de Hierarquia de Pontos de vista (HPV)}
+
+\textit{Elaborar o diagrama de pontos de Vista.  Use qualquer ferramenta e “cole” o resultado}
+
+\newpage
+
+\section{Anexo}
+\subsection{Tabelas VORD}
+
+\textit{Isto é um exemplo de  pontos de vistas   identificados no diagrama}
+
+\begin{table}[H]
+\label{tab:VORD01}
+\begin{small}
+\begin{center}
+    \begin{tabular}{ | l | l |}
+    \hline
+\textbf{Referência} & {Administrador do sistema}\\ \hline
+\textbf{Atributos} & Login, senha, matrícula, nome e email \\\hline
+\multirow{4}{*}{\textbf{Eventos}} & Administrar base de dados referente às informações disponibilizadas no sistema \\ & (parcerias, itens dos pacotes, convênios) \\ & Cadastrar novos usuários (administradores e operadores) do sistema \\ & Gerenciar logs\\\hline
+\multirow{3}{*}{\textbf{Serviços}} & Cadastro, Alteração e Remoção de operador do sistema\\ & Cadastro, Alteração e Remoção de administradores do sistema\\& Consulta de logs\\\hline
+\multirow{2}{*}{\textbf{Subpontos de vista}} & Operador do sistema \\ &
+Usuário do sistema \\\hline
+    \end{tabular}
+\end{center}    
+\end{small}
+\end{table}
+
+\begin{table}[H]
+\label{tab:VORD02}
+\begin{small}
+\begin{center}
+    \begin{tabular}{ | l | l |}
+    \hline
+\textbf{Referência} & {Operador do sistema}\\ \hline
+\textbf{Atributos} & Login, senha, matrícula, nome e email \\\hline
+\multirow{3}{*}{\textbf{Eventos}} & Cadastrar, Alterar e Remover passeios, hotéis, guia turístico, operadoras de \\& cartão de crédito, bancos, companhias aéreas e marítimas\\ & Visualizar e alterar a situação das reservas dos usuários. \\\hline
+\multirow{3}{*}{\textbf{Serviços}} & Cadastrar, Alterar e Remover passeios\\ & Cadastrar, Alterar e Remover companhias marítimas \\& Visualizar e alterar a situação das reservas dos usuários\\\hline
+\textbf{Subpontos de vista} & Usuário do sistema\\\hline
+    \end{tabular}
+\end{center}    
+\end{small}
+\end{table}
+
+\section{Bibliografia}
+
+[1]  Rizzoni, Ariadne M. B. e Chiossi, Thelma C. dos Santos. Introdução à Engenharia de Software. Editora da Unicamp, 2001.
+
+[2]  Sommerville, Ian. Software Engineering. Pearson, 2010.
+
+[3]  Lobatoxxxxxxxxxxxxxxxx. Disponível em <www.xxxxxxxxxx.com/ssl.ppt>. Acesso em 01/03/2011.
+
+\section{Técnica de levantamento utilizada}
+
+\textit{Houve entrevistas? Exemplos de questões. Veja exemplo:}
+
+Depois que o cliente fechou o pacote, ele poderá ter acesso às informações do pacote?
+
+Sim, pode visualizar e até mesmo imprimir.
+
+
+\textit{Brainstorming? Como foi conduzido}
+
+\end{document}
